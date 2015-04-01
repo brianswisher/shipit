@@ -1,5 +1,5 @@
 # shipit
 
-Just paste this into a terminal & change "your_branch":
+Copy your branch name to the clipboard and paste this into a terminal:
 
-curl -s https://raw.githubusercontent.com/brianswisher/shipit/master/shipit.sh your_branch | bash
+curl -s https://raw.githubusercontent.com/brianswisher/shipit/master/shipit.sh | bash
