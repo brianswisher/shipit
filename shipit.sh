@@ -4,7 +4,7 @@
 log()  { printf "$*\n" ; return $? ; }
 
 shipit() {
-  log "branch name: ${1}"
+  log "branch name: `pbpaste`"
 }
 
-shipit $1
+shipit
