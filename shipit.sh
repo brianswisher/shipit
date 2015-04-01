@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 shipit() {
-  cd git checkout master
+  git checkout master
   git fetch origin
   git pull
   git checkout `pbpaste`
