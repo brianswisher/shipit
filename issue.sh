@@ -16,10 +16,10 @@ RAILS-${arrIN[1]}
 closes #----
 \`\`\`
 
-\`bs_branch_name_RAILS_${arrIN[1]}\`
+\`${arrIN[0]}_RAILS_${arrIN[1]}\`
 
 \`\`\`bash
-# echo "bs_branch_name_RAILS_${arrIN[1]}" | pbcopy && curl -s https://raw.githubusercontent.com/brianswisher/shipit/master/shipit.sh | bash
+# echo "${arrIN[0]}_RAILS_${arrIN[1]}" | pbcopy && curl -s https://raw.githubusercontent.com/brianswisher/shipit/master/shipit.sh | bash
 \`\`\`
 
 \`\`\`
