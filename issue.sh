@@ -1,25 +1,22 @@
 #!/usr/bin/env bash
-# bs_htx_fix; 55555
+# htx_fix; 55555
 
+initials='bs'
 
 issue() {
   IN="`pbpaste`"
   arrIN=(${IN//;/ })
 
-  echo "[RAILS-${arrIN[1]}](https://hoteltonight.atlassian.net/browse/RAILS-${arrIN[1]}) - ${arrIN[0]}
+  echo "[RAILS-${arrIN[1]}](https://hoteltonight.atlassian.net/browse/RAILS-${arrIN[1]}) - `echo ${arrIN[0]} | sed 's/_/ /g'`
 
 \`\`\`
-${arrIN[0]}
-
-RAILS-${arrIN[1]}
+`echo ${arrIN[0]} | sed 's/_/ /g'` - RAILS-${arrIN[1]} ($initials)
 
 closes #----
 \`\`\`
 
-\`${arrIN[0]}_RAILS_${arrIN[1]}\`
-
 \`\`\`bash
-echo "${arrIN[0]}_RAILS_${arrIN[1]}" | pbcopy && curl -s https://raw.githubusercontent.com/brianswisher/shipit/master/shipit.sh | bash
+echo "$initials'_'${arrIN[0]}_RAILS_${arrIN[1]}" | pbcopy && curl -s https://raw.githubusercontent.com/brianswisher/shipit/master/shipit.sh | bash
 \`\`\`
 
 \`\`\`
